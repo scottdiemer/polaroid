@@ -2,24 +2,39 @@
   position: relative;
 
   &__photo {
-    width: 25%;
+    margin-top: 10rem;
+    margin-right: 5rem;
+    width: 30%;
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
 
     &--p1 {
-      left: 0;
+      right: 25%;
       top: -2rem;
+      transform: rotate(15deg);
     }
 
     &--p2 {
       right: 0;
       top: 2rem;
+      transform: rotate(-15deg);
     }
 
     &--p3 {
-      left: 20%;
+      right: 20%;
       top: 10rem;
+      transform: rotate(5deg);
+    }
+
+    &:hover {
+      transform: rotate(0) scale(1.25) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20;
+    }
+
+    &:hover &__photo:not(:hover) {
+      transform: scale(0.95);
     }
   }
 }
