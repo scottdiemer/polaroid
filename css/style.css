@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.composition {
+    position: relative;
+}
+.composition__photo {
+    width: 25%;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+}
+.composition__photo--p1 {
+    left: 0;
+    top: -2rem;
+}
+.composition__photo--p2 {
+    right: 0;
+    top: 2rem;
+}
+.composition__photo--p3 {
+    left: 20%;
+    top: 10rem;
+}
